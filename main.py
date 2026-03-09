@@ -15,8 +15,6 @@ while True:
 
         # if i % 100 == 0:
         print(f"{i} commits done")
-        print()
-        print()
 
     subprocess.run(["git", "push", "-u", "origin", "main"], **DEVNULL)
     print("Pushed batch")
