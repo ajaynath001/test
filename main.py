@@ -13,9 +13,10 @@ while True:
         # single call instead of separate add + commit
         subprocess.run(["git", "commit", "-am", f"auto commit {i}"], **DEVNULL)
 
-        if i % 100 == 0:
-            print(f"{i} commits done")
-            print()
+        # if i % 100 == 0:
+        print(f"{i} commits done")
+        print()
+        print()
 
     subprocess.run(["git", "push", "-u", "origin", "main"], **DEVNULL)
     print("Pushed batch")
