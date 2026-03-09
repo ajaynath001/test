@@ -4,7 +4,7 @@ import os
 DEVNULL = {"stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL}
 
 while True:
-    TOTAL_COMMITS = 100
+    TOTAL_COMMITS = 1000
 
     for i in range(TOTAL_COMMITS):
         with open("data.txt", "a") as f:
@@ -18,6 +18,8 @@ while True:
 
     subprocess.run(["git", "push", "-u", "origin", "main"], **DEVNULL)
     print("Pushed batch")
+    print()
+    print()
 
 
 # import subprocess
